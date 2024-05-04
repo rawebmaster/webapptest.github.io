@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простая страница</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    /* Общие стили */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, main, footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    header, main, footer {
+        flex-direction: row;
+    }
+}
+    </style>  
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать!</h1>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="https://plastifimo.ru/up/images/p/u/sb-ng16/sb-ng16-b.jpg" alt="Иллюстрация страницы">
+        </section>
+
+        <section class="content">
+            <h2>Тестируем WebApp!</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed dui ac tellus laoreet mattis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In hac habitasse platea dictumst. Nulla ac magna euismod, tincidunt nibh sit amet, faucibus libero. Duis at erat sit amet massa laoreet tincidunt. Nam nec sem vitae urna feugiat tincidunt sed quis magna. Integer ut mauris id enim varius semper.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - www.example.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
