@@ -48,6 +48,13 @@ img {
 
         <section class="content">
             <h2>Тестируем WebApp!</h2>
+            <button id="alertButton">Alert</button>
+        <script>
+            const alertButton = document.getElementById('alertButton');
+            alertButton.addEventListener('click', () => {
+            alert('Внимание!');
+            });
+        </script>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed dui ac tellus laoreet mattis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In hac habitasse platea dictumst. Nulla ac magna euismod, tincidunt nibh sit amet, faucibus libero. Duis at erat sit amet massa laoreet tincidunt. Nam nec sem vitae urna feugiat tincidunt sed quis magna. Integer ut mauris id enim varius semper.</p>
         </section>
     </main>
