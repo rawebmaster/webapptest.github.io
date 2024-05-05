@@ -42,12 +42,18 @@ img {
   border: none;
   background-image: url('taro-card-back.png');
   background-size: cover;
+  display: block;
+  margin: 5px;  
 }        
 
 .inner_main_body {
     position: relative;
     left: 50%;
     transform: translate(-50%, 0);
+}        
+
+.buttons_div{
+    display:flex;
 }        
 
 /* Адаптивные стили */
@@ -70,13 +76,17 @@ img {
             
         </section>
         <div class = "buttons_div">
-        <section class="content">
         <div id="card1" class="card"></div>
         <div id="card2" class="card"></div>
+        </div>  
+        <div class = "buttons_div">
         <div id="card3" class="card"></div>
         <div id="card4" class="card"></div>
+        </div>      
+        <div class = "buttons_div">
         <div id="card5" class="card"></div>    
-        <div id="card6" class="card"></div>     
+        <div id="card6" class="card"></div>
+        </div>         
         <script>
             const alertButton = document.getElementById('alertButton');
             alertButton.addEventListener('click', () => {
@@ -84,7 +94,6 @@ img {
             });
         </script>
             </div>
-         </section>
     </main>
 
     <footer>
