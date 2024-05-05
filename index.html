@@ -9,6 +9,7 @@
     /* Общие стили */
 body {
     background: url(https://rawebmaster.github.io/webapptest.github.io/stol-gadalki.webp);
+    background-size: cover;
     font-family: sans-serif;
     margin: 0;
     padding: 0;
@@ -21,6 +22,7 @@ header, main, footer {
 }
 
 h1, h2 {
+    color: white;
     text-align: center;
 }
 
@@ -34,10 +36,12 @@ img {
     margin: 0 25%;
 }
         
-.buttons {
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, 0);
+.button {
+  width: 100px;
+  height: 50px;
+  border: none;
+  background-image: url('taro-back.webp');
+  background-size: cover;
 }        
 
 .inner_main_body {
@@ -58,7 +62,7 @@ img {
     <div class = "main_body">
         <div class="inner_main_body">
     <header>
-        <h1>Выберите 3 карты</h1>
+        <h2>Выберите 3 карты</h2>
     </header>
 
     <main>
@@ -68,7 +72,11 @@ img {
         <div class = "buttons_div">
         <section class="content">
             <h2>Тестируем WebApp!</h2>
-            <button id="alertButton" class="button">Alert</button>
+            <button id="card1" class="button"></button>
+            <button id="card2" class="button"></button>
+            <button id="card3" class="button"></button>
+            <button id="card4" class="button"></button>
+            <button id="card5" class="button"></button>
             
         <script>
             const alertButton = document.getElementById('alertButton');
@@ -81,7 +89,6 @@ img {
     </main>
 
     <footer>
-        <p>&copy; 2024 - www.example.com</p>
     </footer>
 
    <script src="https://telegram.org/js/telegram-web-app.js"></script>
