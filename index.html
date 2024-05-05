@@ -103,18 +103,17 @@ width:33.3%;
             var pressed5=0;
             var pressed6=0;
 
-            let data = {
+            function cardsCounter(){
+            console.log(cntr);    
+            if(cntr==3){
+                let data = {
                 pressed1: pressed1,
                 pressed2: pressed2,
                 pressed3: pressed3,
                 pressed4: pressed4,
                 pressed5: pressed5,
                 pressed6: pressed6
-            }
-
-            function cardsCounter(){
-            console.log(cntr);    
-            if(cntr==3){
+                }
                 tg.sendData(JSON.stringify.data);
                 tg.close();
             } else {
