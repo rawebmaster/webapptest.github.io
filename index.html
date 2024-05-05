@@ -92,9 +92,16 @@ width:33.3%;
         <img src="https://rawebmaster.github.io/webapptest.github.io/taro-card-back-10.png" id="card6" class="backcard">
         </div>         
         <script>
+            var pressed1=0;
+            var pressed2=0;
+            var pressed3=0;
+            var pressed4=0;
+            var pressed5=0;
+            var pressed6=0;
             const card1 = document.getElementById('card1');
             card1.addEventListener('click', () => {
-            alert('Внимание!');
+            pressed1=1;    
+            alert('pressed1 = '+ pressed1);
             });
         </script>
             </div>
