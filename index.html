@@ -93,6 +93,7 @@ width:33.3%;
         </div>         
         <script>
             let tg = window.Telegram.WebApp;
+            
             let cntr = 0;
             var pressed1=0;
             var pressed2=0;
@@ -113,7 +114,7 @@ width:33.3%;
             fuction cardsCounter(){
             if(cntr=3):
                 tg.sendData(JSON.stringify.data);
-                tg.close;
+                tg.close();
             else:
                 pass;
             }    
