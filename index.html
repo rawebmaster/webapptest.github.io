@@ -92,42 +92,75 @@ width:33.3%;
         <img src="https://rawebmaster.github.io/webapptest.github.io/taro-card-back-10.png" id="card6" class="backcard">
         </div>         
         <script>
+            let tg = window.Telegram.WebApp;
+            let cntr = 0;
             var pressed1=0;
             var pressed2=0;
             var pressed3=0;
             var pressed4=0;
             var pressed5=0;
             var pressed6=0;
-            const card1 = document.getElementById('card1');
+
+            let data = {
+                pressed1: pressed1,
+                pressed2: pressed2,
+                pressed3: pressed3,
+                pressed4: pressed4,
+                pressed5: pressed5,
+                pressed6: pressed6
+            }
+
+            fuction cardsCounter(){
+            if(cntr=3):
+                tg.sendData(JSON.stringify.data);
+                tg.close;
+            else:
+                pass;
+            }    
+            
+            let card1 = document.getElementById('card1');
             card1.addEventListener('click', () => {
             pressed1=1;    
-            alert('pressed1 = '+ pressed1);
+            cntr+=1;
+            cardsCounter();    
             });
-            const card1 = document.getElementById('card1');
-            card1.addEventListener('click', () => {
-            pressed1=1;    
-            alert('pressed1 = '+ pressed1);
-            });
-            const card2 = document.getElementById('card2');
-            card1.addEventListener('click', () => {
+            
+            let card2 = document.getElementById('card2');
+            card2.addEventListener('click', () => {
             pressed2=1;    
+            cntr+=1;  
+            cardsCounter();    
             });
-            const card3 = document.getElementById('card3');
-            card1.addEventListener('click', () => {
+            
+            let card3 = document.getElementById('card3');
+            card3.addEventListener('click', () => {
             pressed3=1;    
+            cntr+=1; 
+            cardsCounter();    
             });
-            const card4 = document.getElementById('card4');
-            card1.addEventListener('click', () => {
+            
+            let card4 = document.getElementById('card4');
+            card4.addEventListener('click', () => {
             pressed4=1;    
+            cntr+=1;
+            cardsCounter();    
             });
-            const card5 = document.getElementById('card5');
-            card1.addEventListener('click', () => {
+            
+            let card5 = document.getElementById('card5');
+            card5.addEventListener('click', () => {
             pressed5=1;    
+            cntr+=1;
+            cardsCounter();    
             });
-            const card6 = document.getElementById('card6');
-            card1.addEventListener('click', () => {
+            
+            let card6 = document.getElementById('card6');
+            card6.addEventListener('click', () => {
             pressed6=1;    
+            cntr+=1;
+            cardsCounter();    
             });
+           
+            
         </script>
             </div>
     </main>
