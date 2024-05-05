@@ -35,6 +35,12 @@ img {
     transform: translate(-50%, 0);
 }        
 
+.inner_main_body {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}        
+
 /* Адаптивные стили */
 @media (max-width: 768px) {
     header, main, footer {
@@ -44,6 +50,8 @@ img {
     </style>  
 </head>
 <body>
+    <div class = "main_body">
+        <div class="inner_main_body">
     <header>
         <h1>Выберите 3 карты</h1>
     </header>
@@ -71,6 +79,8 @@ img {
         <p>&copy; 2024 - www.example.com</p>
     </footer>
 
-    <script src="script.js"></script>
+   <script src="https://telegram.org/js/telegram-web-app.js"></script>
+        </div>
+    </div>     
 </body>
 </html>
