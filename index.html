@@ -29,6 +29,12 @@ img {
     height: auto;
 }
 
+.button {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}        
+
 /* Адаптивные стили */
 @media (max-width: 768px) {
     header, main, footer {
@@ -44,20 +50,21 @@ img {
 
     <main>
         <section class="hero">
-            <img src="https://plastifimo.ru/up/images/p/u/sb-ng16/sb-ng16-b.jpg" alt="Иллюстрация страницы">
+            
         </section>
-
+        <div class = "buttons_div">
         <section class="content">
             <h2>Тестируем WebApp!</h2>
-            <button id="alertButton">Alert</button>
+            <button id="alertButton" class = "buttons">Alert</button>
+            
         <script>
             const alertButton = document.getElementById('alertButton');
             alertButton.addEventListener('click', () => {
             alert('Внимание!');
             });
         </script>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed dui ac tellus laoreet mattis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In hac habitasse platea dictumst. Nulla ac magna euismod, tincidunt nibh sit amet, faucibus libero. Duis at erat sit amet massa laoreet tincidunt. Nam nec sem vitae urna feugiat tincidunt sed quis magna. Integer ut mauris id enim varius semper.</p>
-        </section>
+            </div>
+         </section>
     </main>
 
     <footer>
