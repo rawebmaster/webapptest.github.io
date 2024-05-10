@@ -457,11 +457,13 @@ function getRandomCard(numero) {
 	    console.log("digit : " + digit);	    
             usedCardOne = getRandomCard(digit); 
 	    console.log("usedCardOne : " + usedCardOne);
-	    console.log('url: ' + url);	    
+	    console.log('url 1: ' + url);
+	    url = "/webapptest.github.io/" + url;
+	    console.log('url 2: ' + url);	    
             card1.src=url;
-            sleep(2000);    
             cntr+=1;
             cardsCounter(usedCardOne);
+	    sleep(2000); 	    
             });
 
             let card2 = document.getElementById('card2');
