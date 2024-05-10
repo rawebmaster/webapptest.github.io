@@ -94,25 +94,347 @@ width:33.3%;
         
         <script>
             let tg = window.Telegram.WebApp;
+            let usedCardOne = '';
+            let url="";
+
+            function sleep(milliseconds) {
+              const date = Date.now();
+              let currentDate = null;
+              do {currentDate = Date.now();
+                 } while (currentDate - date < milliseconds);
+                }
+
+            function getRandomArbitrary(min, max) {
+            return Math.random() * (max - min) + min;
+            }
+
+            function getRandomCard(numero) {
+            switch(numero){
+	case 1:
+	url="/taro/starcan/bashnya.jpg";
+	let usedCard = "bashnya";	
+	break;
+	case 2:
+	url="/taro/starcan/diyavol.jpg";
+	let usedCard = "diyavol";	
+	break;
+	case 3:
+	url="/taro/starcan/imperator.jpg";
+	let usedCard = "imperator";	
+	break;
+	case 4:
+	url="/taro/starcan/imperatrica.jpg";
+	let usedCard = "imperatrica";	
+	break;
+	case 5:
+	url="/taro/starcan/kolesnica.jpg";
+	let usedCard = "kolesnica";	
+	break;
+	case 6:
+	url="/taro/starcan/koleso-fortuny.jpg";
+	let usedCard = "koleso-fortuny";	
+	break;
+	case 7:
+	url="/taro/starcan/luna.jpg";
+	let usedCard = "luna";	
+	break;
+	case 8:
+	url="/taro/starcan/mag.jpg";
+	let usedCard = "mag";	
+	break;
+	case 9:
+	url="/taro/starcan/mir.jpg";
+	let usedCard = "mir";	
+	break;
+	case 10:
+	url="/taro/starcan/poveshennyi.jpg";
+	let usedCard = "poveshennyi";	
+	break;
+	case 11:
+	url="/taro/starcan/shut.jpg";
+	let usedCard = "shut";	
+	break;
+	case 12:
+	url="/taro/starcan/sila.jpg";
+	let usedCard = "sila";	
+	break;
+	case 13:
+	url="/taro/starcan/smert.jpg";
+	let usedCard = "smert";	
+	break;
+	case 14:
+	url="/taro/starcan/solnce.jpg";
+	let usedCard = "solnce";	
+	break;
+	case 15:
+	url="/taro/starcan/spravedlivost.jpg";
+	let usedCard = "spravedlivost";	
+	break;
+	case 16:
+	url="/taro/starcan/sud.jpg";
+	let usedCard = "sud";	
+	break;
+	case 17:
+	url="/taro/starcan/umerennost.jpg";
+	let usedCard = "umerennost";	
+	break;
+	case 18:
+	url="/taro/starcan/vlublennye.jpg";
+	let usedCard = "vlublennye";	
+	break;
+	case 19:
+	url="/taro/starcan/zhrec.jpg";
+	let usedCard = "verh-zhrec";	
+	break;
+	case 20:
+	url="/taro/starcan/zhrica.jpg";
+	let usedCard = "verh-zhrica";	
+	break;
+	case 21:
+	url="/taro/starcan/zvezda.jpg";
+	let usedCard = "zvezda";	
+	break;
+	case 22:
+	url="/taro/kubki/chetverka-kubkov.jpg";
+	let usedCard = "chetverka-kubkov";	
+	break;
+	case 23:
+	url="/taro/kubki/desyatka-kubkov.jpg";
+	let usedCard = "desyatka-kubkov";	
+	break;
+	case 24:
+	url="/taro/kubki/devyatka-kubkov.jpg";
+	let usedCard = "devyatka-kubkov";	
+	break;
+	case 25:
+	url="/taro/kubki/dvoika-kubkov.jpg";
+	let usedCard = "dvoika-kubkov";	
+	break;
+	case 26:
+	url="/taro/kubki/korol-kubkov.jpg";
+	let usedCard = "korol-kubkov";	
+	break;
+	case 27:
+	url="/taro/kubki/koroleva-kubkov.jpg";
+	let usedCard = "koroleva-kubkov";	
+	break;
+	case 28:
+	url="/taro/kubki/pazh-kubkov.jpg";
+	let usedCard = "pazh-kubkov";	
+	break;
+	case 29:
+	url="/taro/kubki/pyaterka-kubkov.jpg";
+	let usedCard = "pyaterka-kubkov";	
+	break;
+	case 30:
+	url="/taro/kubki/rycar-kubkov.jpg";
+	let usedCard = "rycar-kubkov";	
+	break;
+	case 31:
+	url="/taro/kubki/semerka-kubkov.jpg";
+	let usedCard = "semerka-kubkov";	
+	break;
+	case 32:
+	url="/taro/kubki/shesterka-kubkov.jpg";
+	let usedCard = "shesterka-kubkov";	
+	break;
+	case 33:
+	url="/taro/kubki/troika-kubkov.jpg";
+	let usedCard = "troika-kubkov";	
+	break;
+	case 34:
+	url="/taro/kubki/tuz-kubkov.jpg";
+	let usedCard = "tuz-kubkov";	
+	break;
+	case 35:
+	url="/taro/kubki/vosmerka-kubkov.jpg";
+	let usedCard = "vosmerka-kubkov";	
+	break;
+	case 36:
+	url="/taro/mechi/chetverka-kubkov.jpg";
+	let usedCard = "chetverka-mechei";
+	break;
+	case 37:
+	url="/taro/mechi/desyatka-kubkov.jpg";
+	let usedCard = "desyatka-mechei";
+	break;
+	case 38:
+	url="/taro/mechi/devyatka-kubkov.jpg";
+	let usedCard = "devyatka-mechei";
+	break;
+	case 39:
+	url="/taro/mechi/dvoika-kubkov.jpg";
+	let usedCard = "dvoika-mechei";
+	break;
+	case 40:
+	url="/taro/mechi/korol-kubkov.jpg";
+	let usedCard = "korol-mechei";
+	break;
+	case 41:
+	url="/taro/mechi/koroleva-kubkov.jpg";
+	let usedCard = "koroleva-mechei";
+	break;
+	case 42:
+	url="/taro/mechi/pazh-kubkov.jpg";
+	let usedCard = "pazh-mechei";
+	break;
+	case 43:
+	url="/taro/mechi/pyaterka-kubkov.jpg";
+	let usedCard = "pyaterka-mechei";
+	break;
+	case 44:
+	url="/taro/mechi/rycar-kubkov.jpg";
+	let usedCard = "rycar-mechei";
+	break;
+	case 45:
+	url="/taro/mechi/semerka-kubkov.jpg";
+	let usedCard = "semerka-mechei";
+	break;
+	case 46:
+	url="/taro/mechi/shesterka-kubkov.jpg";
+	let usedCard = "shesterka-mechei";
+	break;
+	case 47:
+	url="/taro/mechi/troika-kubkov.jpg";
+	let usedCard = "troika-mechei";
+	break;
+	case 48:
+	url="/taro/mechi/tuz-kubkov.jpg";
+	let usedCard = "tuz-mechei";
+	break;
+	case 49:
+	url="/taro/mechi/vosmerka-kubkov.jpg";
+	let usedCard = "vosmerka-mechei";
+	break;
+	case 50:
+	url="/taro/pentakli/chetverka-kubkov.jpg";
+	let usedCard = "chetverka-pentaklei";
+	break;
+	case 51:
+	url="/taro/pentakli/desyatka-kubkov.jpg";
+	let usedCard = "desyatka-pentaklei";
+	break;
+	case 52:
+	url="/taro/pentakli/devyatka-kubkov.jpg";
+	let usedCard = "devyatka-pentaklei";
+	break;
+	case 53:
+	url="/taro/pentakli/dvoika-kubkov.jpg";
+	let usedCard = "dvoika-pentaklei";
+	break;
+	case 54:
+	url="/taro/pentakli/korol-kubkov.jpg";
+	let usedCard = "korol-pentaklei";
+	break;
+	case 55:
+	url="/taro/pentakli/koroleva-kubkov.jpg";
+	let usedCard = "koroleva-pentaklei";
+	break;
+	case 56:
+	url="/taro/pentakli/pazh-kubkov.jpg";
+	let usedCard = "pazh-pentaklei";
+	break;
+	case 57:
+	url="/taro/pentakli/pyaterka-kubkov.jpg";
+	let usedCard = "pyaterka-pentaklei";
+	break;
+	case 58:
+	url="/taro/pentakli/rycar-kubkov.jpg";
+	let usedCard = "rycar-pentaklei";
+	break;
+	case 59:
+	url="/taro/pentakli/semerka-kubkov.jpg";
+	let usedCard = "semerka-pentaklei";
+	break;
+	case 62:
+	url="/taro/pentakli/shesterka-kubkov.jpg";
+	let usedCard = "shesterka-pentaklei";
+	break;
+	case 61:
+	url="/taro/pentakli/troika-kubkov.jpg";
+	let usedCard = "troika-pentaklei";
+	break;
+	case 62:
+	url="/taro/pentakli/tuz-kubkov.jpg";
+	let usedCard = "tuz-pentaklei";
+	break;
+	case 63:
+	url="/taro/pentakli/vosmerka-kubkov.jpg";
+	let usedCard = "vosmerka-pentaklei";
+	break;
+	case 64:
+	url="/taro/pentakli/chetverka-kubkov.jpg";
+	let usedCard = "chetverka-pentaklei";
+	break;
+	case 65:
+	url="/taro/pentakli/desyatka-kubkov.jpg";
+	let usedCard = "desyatka-pentaklei";
+	break;
+	case 66:
+	url="/taro/pentakli/devyatka-kubkov.jpg";
+	let usedCard = "devyatka-pentaklei";
+	break;
+	case 67:
+	url="/taro/pentakli/dvoika-kubkov.jpg";
+	let usedCard = "dvoika-pentaklei";
+	break;
+	case 68:
+	url="/taro/pentakli/korol-kubkov.jpg";
+	let usedCard = "korol-pentaklei";
+	break;
+	case 69:
+	url="/taro/pentakli/koroleva-kubkov.jpg";
+	let usedCard = "koroleva-pentaklei";
+	break;
+	case 70:
+	url="/taro/pentakli/pazh-kubkov.jpg";
+	let usedCard = "pazh-pentaklei";
+	break;
+	case 71:
+	url="/taro/pentakli/pyaterka-kubkov.jpg";
+	let usedCard = "pyaterka-pentaklei";
+	break;
+	case 72:
+	url="/taro/pentakli/rycar-kubkov.jpg";
+	let usedCard = "rycar-pentaklei";
+	break;
+	case 73:
+	url="/taro/pentakli/semerka-kubkov.jpg";
+	let usedCard = "semerka-pentaklei";
+	break;
+	case 74:
+	url="/taro/pentakli/shesterka-kubkov.jpg";
+	let usedCard = "shesterka-pentaklei";
+	break;
+	case 75:
+	url="/taro/pentakli/troika-kubkov.jpg";
+	let usedCard = "troika-pentaklei";
+	break;
+	case 76:
+	url="/taro/pentakli/tuz-kubkov.jpg";
+	let usedCard = "tuz-pentaklei";
+	break;
+	case 77:
+	url="/taro/pentakli/vosmerka-kubkov.jpg";
+	let usedCard = "vosmerka-pentaklei";
+	break;
+	case 78:
+	url="/taro/starcan/otshelnik.jpg";
+	let usedCard = "otshelnik";
+	break;
+	}
+        return usedCard;        
+            }
+            
 
             let cntr = 0;
-            var pressed1=0;
-            var pressed2=0;
-            var pressed3=0;
-            var pressed4=0;
-            var pressed5=0;
-            var pressed6=0;
-
-            function cardsCounter(){
+            var chosenCard="";
+            
+            function cardsCounter(item){
             console.log(cntr);    
-            if(cntr==3){
+            if(cntr==1){
                 let data = {
-                pressed1: pressed1,
-                pressed2: pressed2,
-                pressed3: pressed3,
-                pressed4: pressed4,
-                pressed5: pressed5,
-                pressed6: pressed6
+                usedCardOne: item
                 }
                 console.log(data);
                 tg.sendData(JSON.stringify(data));
@@ -121,9 +443,14 @@ width:33.3%;
                 cntr=cntr;}
             }
 
+            
+
             let card1 = document.getElementById('card1');
             card1.addEventListener('click', () => {
-            card1.src="https://rawebmaster.github.io/webapptest.github.io/taro/kubki/tuz-kubkov.jpg"
+            let digit = getRandomArbitrary(1, 79);
+            usedCardOne = getRandomCard(digit);        
+            card1.src=url;
+            sleep(2000);    
             cntr+=1;
             cardsCounter();
             });
