@@ -109,7 +109,7 @@ width:33.3%;
             return Math.random() * (max - min) + min;
             }
 
-		function getRandomCard(numero) {
+function getRandomCard(numero) {
     switch(numero){
 	case 1:
 	url="/taro/starcan/bashnya.jpg";
@@ -424,7 +424,9 @@ width:33.3%;
 	usedCard = "otshelnik";
 	break;
 	}
-    return usedCard;        
+    console.log('usedCard in getRandomCard: ' + usedCard);
+    console.log('url in getRandomCard: ' + url);	
+    return usedCard;	
     }
 
             let cntr = 0;
@@ -450,7 +452,10 @@ width:33.3%;
 	    console.log(url);
 	        
             let digit = getRandomArbitrary(1, 79);
-            usedCardOne = getRandomCard(digit);        
+	    console.log("digit : " + digit);	    
+            usedCardOne = getRandomCard(digit); 
+	    console.log("usedCardOne : " + usedCardOne);
+	    console.log('url: ' + url);	    
             card1.src=url;
             sleep(2000);    
             cntr+=1;
