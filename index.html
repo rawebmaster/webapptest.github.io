@@ -34,6 +34,7 @@ img {
 .main_body {
     text-align: center;
     margin: 0 18%;
+    position:relative;	
 }
 
 .card {
@@ -61,6 +62,16 @@ width:33.3%;
 padding: 0 3px;	
 }
 
+#overlay {
+    /*background: black;*/
+    width: 110%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    margin: 10px;
+    left: -5%;
+}	    
+
 
 /* Адаптивные стили */
 @media (max-width: 768px) {
@@ -72,6 +83,7 @@ padding: 0 3px;
 </head>
 <body>
     <div class = "main_body">
+	    <div id="overlay"></div>
         <div class="inner_main_body">
     <header>
         <h2>Выбери 1 карту</h2>
