@@ -110,8 +110,8 @@ width:33.3%;
             }
 
 
-		function getRandomCard(numero) {
-    switch(numero){
+	function getRandomCard(numero) {
+        switch(numero){
 	case 1:
 	url="/taro/starcan/bashnya.jpg";
 	usedCard = "bashnya";	
@@ -447,8 +447,7 @@ width:33.3%;
             }
 
 	    function sleepandGo(){	
-            sleep(2000);
-	    cardsCounter(usedCardOne);		
+            setTimeout(function(){cardsCounter(usedCardOne);},2000);		
 	    }
 	    
             
@@ -462,7 +461,7 @@ width:33.3%;
 	    url = "https://rawebmaster.github.io/webapptest.github.io/" + url;	    
             card1.src=url;
             cntr+=1;  
-		    
+	    sleepandGo();    
             });
 
             let card2 = document.getElementById('card2');
