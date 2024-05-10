@@ -462,6 +462,10 @@ padding: 0 3px;
 	    function sleepandGo(){	
             setTimeout(function(){cardsCounter(usedCardOne);},4000);		
 	    }
+
+	    function riseOverlay(){
+		document.getElementById('overlay').position="relative";    
+	    }	
 	    
             
 
@@ -472,7 +476,8 @@ padding: 0 3px;
 	    url = "https://rawebmaster.github.io/webapptest.github.io/" + url;	    
             card1.src=url;
 	    card1.id="checked";	    
-            cntr+=1;  
+            cntr+=1;
+	    riseOverlay();
 	    sleepandGo();    
             });
 
