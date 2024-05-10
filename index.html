@@ -447,12 +447,14 @@ width:33.3%;
 
             let card1 = document.getElementById('card1');
             card1.addEventListener('click', () => {
+	    console.log(url);
+	        
             let digit = getRandomArbitrary(1, 79);
             usedCardOne = getRandomCard(digit);        
             card1.src=url;
             sleep(2000);    
             cntr+=1;
-            cardsCounter();
+            cardsCounter(usedCardOne);
             });
 
             let card2 = document.getElementById('card2');
