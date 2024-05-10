@@ -105,9 +105,11 @@ width:33.3%;
                  } while (currentDate - date < milliseconds);
                 }
 
-            function getRandomArbitrary(min, max) {
-            return Math.random() * (max - min) + min;
+            function getRandomArbitrary(max) {
+	    return Math.floor(Math.random() * max);	    
             }
+
+	    	
 
 function getRandomCard(numero) {
     switch(numero){
@@ -419,7 +421,7 @@ function getRandomCard(numero) {
 	url="/taro/pentakli/vosmerka-kubkov.jpg";
 	usedCard = "vosmerka-pentaklei";
 	break;
-	case 78:
+	case 0:
 	url="/taro/starcan/otshelnik.jpg";
 	usedCard = "otshelnik";
 	break;
@@ -451,7 +453,7 @@ function getRandomCard(numero) {
             card1.addEventListener('click', () => {
 	    console.log(url);
 	        
-            let digit = getRandomArbitrary(1, 79);
+            let digit = getRandomArbitrary(78);
 	    console.log("digit : " + digit);	    
             usedCardOne = getRandomCard(digit); 
 	    console.log("usedCardOne : " + usedCardOne);
