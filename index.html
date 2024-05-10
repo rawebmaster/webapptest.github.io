@@ -73,7 +73,7 @@ width:33.3%;
     <div class = "main_body">
         <div class="inner_main_body">
     <header>
-        <h2>Выберите 3 карты</h2>
+        <h2>Выбери 1 карту</h2>
     </header>
 
     <main>
@@ -454,10 +454,8 @@ width:33.3%;
 
             let card1 = document.getElementById('card1');
             card1.addEventListener('click', () => {
-            let digit = getRandomArbitrary(78);
-	    console.log("digit : " + digit);	    
+            let digit = getRandomArbitrary(78);    
             usedCardOne = getRandomCard(digit); 
-	    console.log("usedCardOne : " + usedCardOne);
 	    url = "https://rawebmaster.github.io/webapptest.github.io/" + url;	    
             card1.src=url;
             cntr+=1;  
@@ -466,37 +464,52 @@ width:33.3%;
 
             let card2 = document.getElementById('card2');
             card2.addEventListener('click', () => {
-            pressed2=1;
-            cntr+=1;
-            cardsCounter();
+            let digit = getRandomArbitrary(78);    
+            usedCardOne = getRandomCard(digit); 
+	    url = "https://rawebmaster.github.io/webapptest.github.io/" + url;	    
+            card2.src=url;
+            cntr+=1;  
+	    sleepandGo(); 
             });
 
             let card3 = document.getElementById('card3');
             card3.addEventListener('click', () => {
-            pressed3=1;
-            cntr+=1;
-            cardsCounter();
+            let digit = getRandomArbitrary(78);    
+            usedCardOne = getRandomCard(digit); 
+	    url = "https://rawebmaster.github.io/webapptest.github.io/" + url;	    
+            card3.src=url;
+            cntr+=1;  
+	    sleepandGo(); 
             });
 
             let card4 = document.getElementById('card4');
             card4.addEventListener('click', () => {
-            pressed4=1;
-            cntr+=1;
-            cardsCounter();
+            let digit = getRandomArbitrary(78);    
+            usedCardOne = getRandomCard(digit); 
+	    url = "https://rawebmaster.github.io/webapptest.github.io/" + url;	    
+            card4.src=url;
+            cntr+=1;  
+	    sleepandGo(); 
             });
 
             let card5 = document.getElementById('card5');
             card5.addEventListener('click', () => {
-            pressed5=1;
-            cntr+=1;
-            cardsCounter();
+            let digit = getRandomArbitrary(78);    
+            usedCardOne = getRandomCard(digit); 
+	    url = "https://rawebmaster.github.io/webapptest.github.io/" + url;	    
+            card5.src=url;
+            cntr+=1;  
+	    sleepandGo(); 
             });
 
             let card6 = document.getElementById('card6');
             card6.addEventListener('click', () => {
-            pressed6=1;
-            cntr+=1;
-            cardsCounter();
+            let digit = getRandomArbitrary(78);    
+            usedCardOne = getRandomCard(digit); 
+	    url = "https://rawebmaster.github.io/webapptest.github.io/" + url;	    
+            card6.src=url;
+            cntr+=1;  
+	    sleepandGo(); 
             });
 
 
