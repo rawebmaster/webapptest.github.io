@@ -441,6 +441,7 @@ function getRandomCard(numero) {
                 usedCardOne: item
                 }
                 console.log(data);
+		sleep(2000);     
                 tg.sendData(JSON.stringify(data));
                 tg.close();
             } else {
@@ -452,7 +453,6 @@ function getRandomCard(numero) {
             let card1 = document.getElementById('card1');
             card1.addEventListener('click', () => {
 	    console.log(url);
-	        
             let digit = getRandomArbitrary(78);
 	    console.log("digit : " + digit);	    
             usedCardOne = getRandomCard(digit); 
@@ -462,8 +462,7 @@ function getRandomCard(numero) {
 	    console.log('url 2: ' + url);	    
             card1.src=url;
             cntr+=1;
-            cardsCounter(usedCardOne);
-	    sleep(2000); 	    
+            cardsCounter(usedCardOne);	    
             });
 
             let card2 = document.getElementById('card2');
