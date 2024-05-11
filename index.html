@@ -467,8 +467,7 @@ padding: 0 3px;
 	    function riseOverlay(){
 		document.getElementById('overlay').style.position="absolute";    
 	    }	
-	    
-            
+		
 
             let card1 = document.getElementById('card1');
             card1.addEventListener('click', () => {
@@ -476,7 +475,12 @@ padding: 0 3px;
             usedCardOne = getRandomCard(digit); 
 	    url = "https://rawebmaster.github.io/webapptest.github.io/" + url;	    
             card1.src=url;
-	    card1.id="checked";	    
+	    let num4Rotate = getRandomArbitrary(2);
+	    if (num4Rotate == 0) {
+		card1.style.transform="rotate:(180deg)";
+	    } else {
+		card1.style.transform="rotate:(180deg)";    
+	    } 
             cntr+=1;
 	    riseOverlay();
 	    sleepandGo();    
